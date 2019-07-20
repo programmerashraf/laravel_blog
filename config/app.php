@@ -176,7 +176,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Conner\Tagging\Providers\TaggingServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         QCod\ImageUp\ImageUpServiceProvider::class,
 
     ],
