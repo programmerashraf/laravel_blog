@@ -33,7 +33,15 @@
                 <a href="#"><span class="fa fa-instagram"></span></a>
                 <a href="#"><span class="fa fa-youtube-play"></span></a>
               </div>
-
+              <div class="col-3 social text-right">
+                @if(auth()->guard('visitor')->check())
+                  <a href="">{{ auth()->guard('visitor')->user()->name }}</a>
+                  <a href="{{ url('logout') }}">Logout</a>
+                @else
+                  <a href="{{ url('login') }}">Login</a>
+                  <a href="{{ url('register') }}">Register</a>
+                @endif
+              </div>
             </div>
           </div>
         </div>

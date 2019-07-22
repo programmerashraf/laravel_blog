@@ -20,15 +20,15 @@
             @csrf
             <div class="form-group">
                 <label for="title">Post title</label>
-                <input type="text" name="title" id="title" class="form-control" placeholder="Post title">
+                <input type="text" name="title" id="title" class="form-control" placeholder="Post title" value="{{ old('title') }}">
             </div>
             <div class="form-group">
                 <label for="body">Post content</label>
-                <textarea name="body" id="body"></textarea>
+                <textarea name="body" id="body">{{ old("bio") }}</textarea>
             </div>
             <div class="form-group">
                 <label for="image">Post image</label>
-                <input type="file" name="image" class="form-control-file">
+                <input type="file" name="image" class="form-control-file" value="{{ old("image") }}">
             </div>
             <div class="form-group">
                 <label for="category">Post category</label>
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label for="tags">Tags</label>
-                <input type="text" value="" data-role="tagsinput" class="form-control" name="tags">
+                <input type="text" value="" data-role="tagsinput" class="form-control" name="tags" value="{{ old('tags') }}">
             </div>
             <div class="form-group">
                 <input type="submit" class="form-control btn btn-facebook" value="Publish">

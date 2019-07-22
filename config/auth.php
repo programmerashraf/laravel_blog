@@ -40,7 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'visitor' => [
+            'driver' => 'session',
+            'provider'  => 'visitors'
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -70,6 +73,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'visitors' => [
+            'driver' => 'eloquent',
+            'model'  => App\Visitor::class
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

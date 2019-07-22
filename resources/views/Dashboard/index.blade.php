@@ -57,7 +57,7 @@
                                     <img src="{{url($post->image)}}" alt="Product Image">
                                 </div>
                                 <div class="product-info">
-                                    <a href="javascript:void(0)" class="product-title">{{$post->title}}
+                                    <a href="{{url("/post/".$post->slug."/".$post->id)}}" class="product-title">{{$post->title}}
                                         <span class="label label-warning pull-right">
                                             <i class="fa fa-comments-o"></i>
                                             {{$post->comments->count()}}

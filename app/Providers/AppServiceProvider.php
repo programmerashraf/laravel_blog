@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         config(["defaults"=>File::getRequire(loadConfig('defaults'))]);
         bladeDirectives();
         menuItems($events);
+        auth()->shouldUse('web');
         View::share('categories', Category::all());
         View::share('tags', \DB::table("tagging_tags")->get());
         View::share('user', User::find(1));

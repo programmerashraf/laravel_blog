@@ -26,5 +26,16 @@ Route::post("comment/create", "CommentController@store");
 Route::get("category/{name}", "Dashboard\CategoryController@show");
 Route::get("tag/{name}", "TagController@show");
 
+Route::group(['middleware' => 'guest_visitor'], function() {
+    Route::get("login", "VisitorController@login");
+    Route::post("login", "VisitorController@session");
+    Route::get("register", "VisitorController@register");
+    Route::post("register", "VisitorController@store");
+});
+
+Route::group(['middleware' => 'visitor'], function() {
+    Route::get("logout", "VisitorController@logout");
+});
+
 //Auth::Routes();
 

@@ -17,6 +17,35 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+      pre {
+    background: #333;
+    padding: 1em;
+    font-size: 90%;
+    font-family: monospace;
+    overflow-x: auto;
+    clear: both;
+    color: #dfdfdf;
+    margin: 0 0 1em;
+    border-radius: 2px;
+
+}
+.pre_text {
+    background: #f3f3f3;
+    color: #5f1111;
+    padding: 1em 1.5em;
+    clear: both;
+    overflow: auto;
+    margin: 2em 0;
+    border-left: 2px solid #888;
+    font-size: 95%;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    border-radius: 0;
+}
+    </style>
+
   </head>
   <body>
     
